@@ -20,7 +20,7 @@ O objetivo é avaliar a capacidade de lidar com multiplas requisições, organiz
 
 <div id="-funcionalidades">
   
-- [x]Crie um aplicativo react com um menu superior contendo 2 links: "Lista de gatos" e "Formulário".
+- [x] Crie um aplicativo react com um menu superior contendo 2 links: "Lista de gatos" e "Formulário".
   - [x] O link "Lista de gatos" deve direcionar a aplicação para uma rota que:
       - [x] Deve requisitar uma lista de tags no endereço: https://cataas.com/api/tags.
       - [x] As tags deverão ser exibidas em forma de cards expansíveis.
@@ -28,7 +28,7 @@ O objetivo é avaliar a capacidade de lidar com multiplas requisições, organiz
       - [x] Quando clicar no titulo do card, o corpo dele deve aparecer de forma a se expandir abaixo do título..
       - [x] Dentro do corpo do card deve aparecer uma lista dos ids obtidos como resposta do endereço https://cataas.com/api/cats, contendo a tag do card selecionado.
   
-  - [x]O link "Formulário" deve direcionar a aplicação para uma rota que:
+  - [x] O link "Formulário" deve direcionar a aplicação para uma rota que:
       - [x] Exibe um formulário de cadastro em 3 etapas
         - [x] A primeira etapa deve solicitar:
           - [x] Email (obrigatório)
