@@ -1,10 +1,13 @@
 import TextField from '@material-ui/core/TextField';
 import FormControl from '@material-ui/core/FormControl';
+import useStyles from '../components/style';
 
 export default function Etapa2({ name, setName, lastName, setLastName, data, setData, errors }) {
+  const classes = useStyles();
   return (
     <div>
       <FormControl>
+      <div className={classes.inputs}>
         <TextField
           error={errors.name}
           onChange={setName}
@@ -13,6 +16,8 @@ export default function Etapa2({ name, setName, lastName, setLastName, data, set
           variant="outlined"
           value={name}
         />
+        </div>
+        <div className={classes.inputs}>
         <TextField
           error={errors.lastName}
           onChange={setLastName}
@@ -21,6 +26,8 @@ export default function Etapa2({ name, setName, lastName, setLastName, data, set
           variant="outlined"
           value={lastName}
         />
+        </div>
+        <div className={classes.inputs}>
         <TextField
           onChange={setData}
           label="Data de Nascimento"
@@ -31,6 +38,7 @@ export default function Etapa2({ name, setName, lastName, setLastName, data, set
             shrink: true,
           }}
         />
+        </div>
       </FormControl>
     </div>
   );
