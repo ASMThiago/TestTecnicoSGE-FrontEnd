@@ -10,7 +10,7 @@
 
 <div id="-sobre-o-projeto">
 
-Esse é um projeto desenvolvido para a etapa de teste da vaga de Front End Júnior para a **[SGE Tecnologia](https://www.linkedin.com/company/sge-tecnologia/about/).
+Esse é um projeto desenvolvido para a etapa de teste da vaga de Front End Júnior para a **[SGE Tecnologia](https://www.linkedin.com/company/sge-tecnologia/about/)**.
 
 O objetivo é avaliar a capacidade de lidar com multiplas requisições, organizar dados de fontes assíncronas e trabalhar com validações de formulários complexos. 
 
