@@ -119,7 +119,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 <div id="-autor">
 
   <a href="https://github.com/ASMThiago">
-    <img style="border-radius: 50%;" src="./Stefano Branz.jpeg" width="100px;" alt="Autor"/>
+    <img style="border-radius: 50%;" src="./Thiago_Santos.png" width="100px;" alt="Autor"/>
     <br />
     <sub><b style="font-size: 15px;">Thiago Santos</b></sub>
   </a>🚀
@@ -127,7 +127,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
   <br />
   <br />
 
-[![Linkedin Badge](https://www.linkedin.com/in/thiago-a-santos/)
+[![Linkedin Badge](https://img.shields.io/badge/-ThiagoSantos-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/thiago-a-santos/)](https://www.linkedin.com/in/thiago-a-santos/)
 [![Gmail Badge](https://img.shields.io/badge/asm.thiago@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:asm.thiago@gmail.com)](mailto:asm.thiago@gmail.com)
 
 ---
