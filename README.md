@@ -6,13 +6,6 @@
  <a href="#-autor">Autor</a> • 
 </p>
 
-<h2 align="center">
-  <u>Acese o App no link abaixo para testar!</u>
-  <br><a style="font-size: 25px; " href="https://stefano-branz-front-end.vercel.app/">
-    Tinyone
-  </a>
-</h2>
-
 ## 💻 Sobre o projeto
 
 <div id="-sobre-o-projeto">
