@@ -1,70 +1,140 @@
-# Getting Started with Create React App
+<p align="center">
+ <a href="#-sobre-o-projeto">Sobre</a> •
+ <a href="#-funcionalidades">Funcionalidades</a> •
+ <a href="#-como-executar-o-projeto">Como executar</a> • 
+ <a href="#-tecnologias">Tecnologias</a> •
+ <a href="#-autor">Autor</a> • 
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2 align="center">
+  <u>Acese o App no link abaixo para testar!</u>
+  <br><a style="font-size: 25px; " href="https://stefano-branz-front-end.vercel.app/">
+    Tinyone
+  </a>
+</h2>
 
-## Available Scripts
+## 💻 Sobre o projeto
 
-In the project directory, you can run:
+<div id="-sobre-o-projeto">
 
-### `npm start`
+Esse é um projeto desenvolvido para a etapa de teste da vaga de Front End Júnior para a **[SGE Tecnologia](https://www.linkedin.com/company/sge-tecnologia/about/).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+O objetivo é avaliar a capacidade de lidar com multiplas requisições, organizar dados de fontes assíncronas e trabalhar com validações de formulários complexos. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## ⚙️ Funcionalidades
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<div id="-funcionalidades">
+  
+- [x]Crie um aplicativo react com um menu superior contendo 2 links: "Lista de gatos" e "Formulário".
+  - [x] O link "Lista de gatos" deve direcionar a aplicação para uma rota que:
+      - [x] Deve requisitar uma lista de tags no endereço: https://cataas.com/api/tags.
+      - [x] As tags deverão ser exibidas em forma de cards expansíveis.
+      - [x] No título de cada card deve aparecer o nome da tag.
+      - [x] Quando clicar no titulo do card, o corpo dele deve aparecer de forma a se expandir abaixo do título..
+      - [x] Dentro do corpo do card deve aparecer uma lista dos ids obtidos como resposta do endereço https://cataas.com/api/cats, contendo a tag do card selecionado.
+  
+  - [x]O link "Formulário" deve direcionar a aplicação para uma rota que:
+      - [x] Exibe um formulário de cadastro em 3 etapas
+        - [x] A primeira etapa deve solicitar:
+          - [x] Email (obrigatório)
+          - [x] Senha (obrigatório)
+          - [x] Confirmação de senha (obrigatório)
+        - [x] A segunda etapa deve solicitar:
+          - [x] Nome (obrigatório)
+          - [x] Sobrenome (obrigatório)
+          - [x] Data de Nascimento
+        - [x] A terceira etapa deve solicitar:
+          - [x] Endereço Completo (Obrigatorio)
+      - [x] As etapas devem ser mostradas uma de cada vez, com abas para que o usuário alterne livremente entre elas
+      - [x] Cada etapa precisa necessariamente ser escrita em um React Component separado
+      - [x] Em cada etapa deve haver um botão de avançar para a próxima etapa
+      - [x] Em todas as estapas o botão de enviar deve estar visível, mas ficará desabilitado até que todo o cadastro das 3 abas esteja concluído
+      - [x] Caso haja algum erro de formulário em alguma etapa, a aba daquela etapa deve ter um indicador visual de erro
+      - [x] Quando preencher uma etapa corretamente, a aba daquela etapa deve ter um indicador visual de concluída
+      - [x] Quando todas as etapas forem preenchidas corretamentes e o usuário clicar em "enviar", deve aparecer uma modal de confirmação de sucesso na tela.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Como executar o projeto
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<div id="-como-executar-o-projeto">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Antes de rodar o projeto é preciso instalar algumas ferramentas. Caso você já tenha instalado pode pular a etapa de pré-requisitos.
 
-### `npm run eject`
+### <u>Pré-requisitos</u>:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Antes de começar, é preciso ter instalado as seguintes ferramentas:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Editor de códigos:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  [VSCode](https://code.visualstudio.com/)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Ferramenta de versionamento de código:
 
-## Learn More
+  [GIT](https://git-scm.com)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Manipulador de pacotes:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  [NPM](https://www.npmjs.com/)
 
-### Code Splitting
+### <u>Rodar a aplicação</u>:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+&nbsp;
 
-### Analyzing the Bundle Size
+```bash
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Abra seu terminal e digite para abrir o VSCode
+  code
 
-### Making a Progressive Web App
+# Abra a pasta onde vai ficar o projeto
+# Clone este repositório
+$ git clone https://github.com/ASMThiago/TestTecnicoSGE-FrontEnd
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# Acesse a pasta do projeto no seu terminal/cmd
+$ cd TestTecnicoSGE-FrontEnd
 
-### Advanced Configuration
+# Instale as dependências
+$ npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+# Execute a aplicação em modo de desenvolvimento
+$ npm run start
 
-### Deployment
+# A aplicação será aberta na porta:3000 - acesse http://localhost:3000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+---
 
-### `npm run build` fails to minify
+## 🛠 Tecnologias
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<div id="-tecnologias">
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+#### **Website** ( + )
+
+- **[React](https://reactjs.org/)**
+  - **[Hooks](https://reactjs.org/docs/hooks-intro.html)**
+- **[JavaScript](https://www.javascript.com/)**
+- **[Material UI](https://https://material-ui.com//)**
+
+> Veja o arquivo [package.json](https://github.com/tgmarinho/README-ecoleta/blob/master/web/package.json)
+ 
+ ## 🦸 Autor
+
+<div id="-autor">
+
+  <a href="https://github.com/ASMThiago">
+    <img style="border-radius: 50%;" src="./Stefano Branz.jpeg" width="100px;" alt="Autor"/>
+    <br />
+    <sub><b style="font-size: 15px;">Thiago Santos</b></sub>
+  </a>🚀
+
+  <br />
+  <br />
+
+[![Linkedin Badge](https://media.licdn.com/media/AAYQAQSOAAgAAQAAAAAAAB-zrMZEDXI2T62PSuT6kpB6qg.png)](https://www.linkedin.com/in/thiago-a-santos/)
+[![Gmail Badge](https://img.shields.io/badge/asm.thiago@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:asm.thiago@gmail.com)](mailto:asm.thiago@gmail.com)
+
+---
