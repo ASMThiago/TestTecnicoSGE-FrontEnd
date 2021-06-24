@@ -1,26 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import React, { useState } from 'react';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import catServices from '../services/cat';
+import useStyles from './style';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    width: '100%',
-  },
-  heading: {
-    fontSize: theme.typography.pxToRem(15),
-    fontWeight: theme.typography.fontWeightRegular,
-  },
-  acorddion: {
-    borderBottom: '1px solid gray',
-  },
-  acorddionDetails: {
-    display: 'block',
-  },
-}));
 
 export default function CatTag({ tag }) {
   const classes = useStyles();
