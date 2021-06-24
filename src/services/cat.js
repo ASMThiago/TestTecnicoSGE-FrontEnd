@@ -1,12 +1,16 @@
 import defaultAxios from './axios';
 
+let cats = [];
 const catServices = {
   async getTags() {
     return await defaultAxios.get('/tags');
   },
   async getIds(tag) {
-    const { data = [] } = await defaultAxios.get('/cats');
-    return data.filter((gato) => gato.tags.includes((tag)));
+    if(cats.length === 0) {
+      const { data = [] } = await defaultAxios.get('/cats');
+      cats = data;
+    } 
+    return cats.filter((gato) => gato.tags.includes((tag)));
   },
 };
 
