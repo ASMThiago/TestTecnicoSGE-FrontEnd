@@ -22,6 +22,9 @@ const useStyles = makeStyles((theme) => ({
   acorddionDetails: {
     display: 'block',
   },
+  inputs: {
+    margin: '10px 0px 0px 0px'
+  },
 }));
 
 export default useStyles;

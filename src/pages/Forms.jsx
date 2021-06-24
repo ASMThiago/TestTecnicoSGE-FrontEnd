@@ -4,7 +4,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Button from '@material-ui/core/Button';
 import Modal from '@material-ui/core/Modal';
-import useStyles from '../components/style'
+import useStyles from '../components/style';
 import LayoutDefault from '../layouts/LayoutDefault';
 import Etapa1 from '../components/Etapa1';
 import Etapa2 from '../components/Etapa2';
