@@ -127,7 +127,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
   <br />
   <br />
 
-[![Linkedin Badge](https://media.licdn.com/media/AAYQAQSOAAgAAQAAAAAAAB-zrMZEDXI2T62PSuT6kpB6qg.png)](https://www.linkedin.com/in/thiago-a-santos/)
+[![Linkedin Badge](https://www.linkedin.com/in/thiago-a-santos/)
 [![Gmail Badge](https://img.shields.io/badge/asm.thiago@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:asm.thiago@gmail.com)](mailto:asm.thiago@gmail.com)
 
 ---
