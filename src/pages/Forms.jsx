@@ -4,7 +4,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Button from '@material-ui/core/Button';
 import Modal from '@material-ui/core/Modal';
-import { makeStyles } from '@material-ui/core/styles';
+import useStyles from '../components/style'
 import LayoutDefault from '../layouts/LayoutDefault';
 import Etapa1 from '../components/Etapa1';
 import Etapa2 from '../components/Etapa2';
@@ -17,16 +17,6 @@ import {
   cepValidation,
 } from '../utils/validations';
 
-const useStyles = makeStyles((theme) => ({
-  paper: {
-    position: 'absolute',
-    width: 400,
-    backgroundColor: theme.palette.background.paper,
-    border: '2px solid #000',
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
-  },
-}));
 
 function rand() {
   return Math.round(Math.random() * 20) - 10;
