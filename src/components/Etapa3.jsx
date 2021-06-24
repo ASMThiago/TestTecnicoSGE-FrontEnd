@@ -4,6 +4,7 @@ import Select from '@material-ui/core/Select';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
+import useStyles from '../components/style';
 
 
 export default function Etapa3({
@@ -19,6 +20,8 @@ export default function Etapa3({
   setNumero,
   errors,
 }) {
+  const classes = useStyles();
+
   const [open, setOpen] = useState(false);
 
   const handleClose = () => {
@@ -75,7 +78,7 @@ export default function Etapa3({
           <MenuItem value="SE">Sergipe</MenuItem>
           <MenuItem value="TO">Tocantins</MenuItem>
         </Select>
-
+        <div className={classes.inputs}>
         <TextField
         error={errors.cep}
         onChange={setCep}
@@ -84,7 +87,8 @@ export default function Etapa3({
         variant="outlined"
         value={cep}
         />
-
+        </div>
+        <div className={classes.inputs}>
         <TextField
         onChange={setRua}
         label="Rua/Av."
@@ -92,7 +96,8 @@ export default function Etapa3({
         variant="outlined"
         value={rua}
         />
-
+        </div>
+        <div className={classes.inputs}>
         <TextField
           onChange={setBairro}
           label="Bairro"
@@ -100,7 +105,8 @@ export default function Etapa3({
           variant="outlined"
           value={bairro}
         />
-
+        </div>
+        <div className={classes.inputs}>
         <TextField
           onChange={setNumero}
           label="Numero"
@@ -108,6 +114,7 @@ export default function Etapa3({
           variant="outlined"
           value={numero}
         />
+        </div>
       </FormControl>
     </div>
   );
