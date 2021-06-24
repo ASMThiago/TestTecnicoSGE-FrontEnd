@@ -1,23 +1,37 @@
-import useInput from '../hooks/useInput';
+import TextField from '@material-ui/core/TextField';
+import FormControl from '@material-ui/core/FormControl';
 
-export default function Etapa2({onChange}) {
-  const [name, setName] = useInput('');
-  const [lastName, setLastName] = useInput('');
-
+export default function Etapa2({ name, setName, lastName, setLastName, data, setData, errors }) {
   return (
     <div>
-      <label>
-        Nome
-        <input type="text" value={name} onChange={setName} />
-      </label>
-      <label>
-        Sobrenome
-        <input type="text" value={lastName} onChange={setLastName} />
-      </label>
-      <label>
-        Data de Nascimento
-        <input type="date" />
-      </label>
+      <FormControl>
+        <TextField
+          error={errors.name}
+          onChange={setName}
+          label="Nome"
+          type="text"
+          variant="outlined"
+          value={name}
+        />
+        <TextField
+          error={errors.lastName}
+          onChange={setLastName}
+          label="Sobrenome"
+          type="text"
+          variant="outlined"
+          value={lastName}
+        />
+        <TextField
+          onChange={setData}
+          label="Data de Nascimento"
+          type="date"
+          variant="outlined"
+          value={data}
+          InputLabelProps={{
+            shrink: true,
+          }}
+        />
+      </FormControl>
     </div>
   );
 }

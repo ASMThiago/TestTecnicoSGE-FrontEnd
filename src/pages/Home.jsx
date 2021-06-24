@@ -1,17 +1,26 @@
-import React from 'react'
-import LayoutDefault from '../layouts/LayoutDefault'
-import catServices from '../services/cat'
+import React, { useEffect, useState } from 'react';
+import LayoutDefault from '../layouts/LayoutDefault';
+import CatTag from '../components/CatTag';
+import catServices from '../services/cat';
 
 export default function Home() {
-  catServices.getIds("gif").then((res) => {
-    console.log(res);
-  });
+  const [tags, setTags] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const { data = [] } = await catServices.getTags();
+      setTags(data);
+    }
+    fetchData();
+  }, []);
 
   return (
     <div>
       <LayoutDefault tabActive={0}>
-        HOME
-      </LayoutDefault>      
+        {tags.map((tag) => (
+          <CatTag tag={tag} />
+        ))}
+      </LayoutDefault>
     </div>
-  )
+  );
 }

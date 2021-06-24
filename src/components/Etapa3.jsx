@@ -1,60 +1,114 @@
-export default function Etapa3() {
+import { useState } from 'react';
+import TextField from '@material-ui/core/TextField';
+import Select from '@material-ui/core/Select';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@material-ui/core/FormControl';
 
+
+export default function Etapa3({
+  estado,
+  setEstado,
+  cep,
+  setCep,
+  rua,
+  setRua,
+  bairro,
+  setBairro,
+  numero,
+  setNumero,
+  errors,
+}) {
+  const [open, setOpen] = useState(false);
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
 
   return (
     <div>
-      <form>
-        <div>
-          <label for="cep">CEP</label>
-          <input id="cep" type="text" required />
-        </div>
-        <div>
-          <label for="logradouro">Logradouro</label>
-          <input id="logradouro" type="text" required />
-        </div>
-        <div>
-          <label for="numero">Número</label>
-          <input id="numero" type="text" />
-        </div>
-        <div>
-          <label for="complemento">Complemento</label>
-          <input id="complemento" type="text" />
-        </div>
-        <div>
-          <label for="bairro">Bairro</label>
-          <input id="bairro" type="text" required />
-        </div>
-        <label for="uf">Estado</label>
-        <select id="uf">
-          <option value="AC">Acre</option>
-          <option value="AL">Alagoas</option>
-          <option value="AP">Amapá</option>
-          <option value="AM">Amazonas</option>
-          <option value="BA">Bahia</option>
-          <option value="CE">Ceará</option>
-          <option value="DF">Distrito Federal</option>
-          <option value="ES">Espírito Santo</option>
-          <option value="GO">Goiás</option>
-          <option value="MA">Maranhão</option>
-          <option value="MT">Mato Grosso</option>
-          <option value="MS">Mato Grosso do Sul</option>
-          <option value="MG">Minas Gerais</option>
-          <option value="PA">Pará</option>
-          <option value="PB">Paraíba</option>
-          <option value="PR">Paraná</option>
-          <option value="PE">Pernambuco</option>
-          <option value="PI">Piauí</option>
-          <option value="RJ">Rio de Janeiro</option>
-          <option value="RN">Rio Grande do Norte</option>
-          <option value="RS">Rio Grande do Sul</option>
-          <option value="RO">Rondônia</option>
-          <option value="RR">Roraima</option>
-          <option value="SC">Santa Catarina</option>
-          <option value="SP">São Paulo</option>
-          <option value="SE">Sergipe</option>
-          <option value="TO">Tocantins</option>
-        </select>
-      </form>
+      <FormControl>
+      <InputLabel id="uf">
+          Estado
+        </InputLabel>
+        <Select
+          labelId="uf"
+          id="uf"
+          open={open}
+          onClose={handleClose}
+          onOpen={handleOpen}
+          value={estado}
+          onChange={setEstado}
+        >
+          <MenuItem value="">
+            <em>None</em>
+          </MenuItem>
+          <MenuItem value="AC">Acre</MenuItem>
+          <MenuItem value="AL">Alagoas</MenuItem>
+          <MenuItem value="AP">Amapá</MenuItem>
+          <MenuItem value="AM">Amazonas</MenuItem>
+          <MenuItem value="BA">Bahia</MenuItem>
+          <MenuItem value="CE">Ceará</MenuItem>
+          <MenuItem value="DF">Distrito Federal</MenuItem>
+          <MenuItem value="ES">Espírito Santo</MenuItem>
+          <MenuItem value="GO">Goiás</MenuItem>
+          <MenuItem value="MA">Maranhão</MenuItem>
+          <MenuItem value="MT">Mato Grosso</MenuItem>
+          <MenuItem value="MS">Mato Grosso do Sul</MenuItem>
+          <MenuItem value="MG">Minas Gerais</MenuItem>
+          <MenuItem value="PA">Pará</MenuItem>
+          <MenuItem value="PB">Paraíba</MenuItem>
+          <MenuItem value="PR">Paraná</MenuItem>
+          <MenuItem value="PE">Pernambuco</MenuItem>
+          <MenuItem value="PI">Piauí</MenuItem>
+          <MenuItem value="RJ">Rio de Janeiro</MenuItem>
+          <MenuItem value="RN">Rio Grande do Norte</MenuItem>
+          <MenuItem value="RS">Rio Grande do Sul</MenuItem>
+          <MenuItem value="RO">Rondônia</MenuItem>
+          <MenuItem value="RR">Roraima</MenuItem>
+          <MenuItem value="SC">Santa Catarina</MenuItem>
+          <MenuItem value="SP">São Paulo</MenuItem>
+          <MenuItem value="SE">Sergipe</MenuItem>
+          <MenuItem value="TO">Tocantins</MenuItem>
+        </Select>
+
+        <TextField
+        error={errors.cep}
+        onChange={setCep}
+        label="CEP"
+        type="text"
+        variant="outlined"
+        value={cep}
+        />
+
+        <TextField
+        onChange={setRua}
+        label="Rua/Av."
+        type="text"
+        variant="outlined"
+        value={rua}
+        />
+
+        <TextField
+          onChange={setBairro}
+          label="Bairro"
+          type="text"
+          variant="outlined"
+          value={bairro}
+        />
+
+        <TextField
+          onChange={setNumero}
+          label="Numero"
+          type="text"
+          variant="outlined"
+          value={numero}
+        />
+      </FormControl>
     </div>
   );
 }
