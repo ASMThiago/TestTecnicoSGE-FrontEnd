@@ -111,6 +111,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
   - **[Hooks](https://reactjs.org/docs/hooks-intro.html)**
 - **[JavaScript](https://www.javascript.com/)**
 - **[Material UI](https://https://material-ui.com//)**
+- **[Axios](https://www.npmjs.com/package/axios)**
 
 > Veja o arquivo [package.json](https://github.com/tgmarinho/README-ecoleta/blob/master/web/package.json)
  
